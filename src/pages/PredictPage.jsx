@@ -120,13 +120,16 @@ export default function PredictPage() {
 
       console.log('Sending payload:', payload);
 
-      const response = await fetch('http://localhost:8000/predict', {
+      const API_URL = import.meta.env.VITE_API_URL;
+
+      const response = await fetch(`${API_URL}/predict`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(payload)
       });
+
 
       const data = await response.json();
       console.log('Response data:', data);
