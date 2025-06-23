@@ -121,7 +121,8 @@ export default function PredictPage() {
       console.log('Sending payload:', payload);
 
       const API_URL = import.meta.env.VITE_API_URL;
-      console.log("✅ Resolved API URL:", API_URL);
+      console.log("✅ ENV URL:", API_URL);
+
       
       const response = await fetch(`${API_URL}/predict`, {
         method: 'POST',
