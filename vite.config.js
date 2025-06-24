@@ -8,4 +8,7 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
+  define:{
+    'import.meta.env.VITE_API_URL': JSON.stringify(env.VITE_API_URL)
+  }
 })
